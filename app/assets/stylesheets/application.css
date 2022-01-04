@@ -1,15 +1,44 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body, .card {
+    background: rgb(227,156,255);
+    background: linear-gradient(90deg, rgba(227,156,255,1) 0%, rgba(169,195,255,1) 100%);
+}
+.para{
+    font-size:  1.5rem;
+}
+input[type="submit"] {
+    color: #0d6efd;
+    background: none;
+    border: 1px solid transparent;
+    border-color: #0d6efd;
+    border-radius: 0.2rem;
+    height: 37px;
+    margin-top: 10px;
+}
+input[type="submit"]:hover {
+    color: white;
+    background: #0d6efd;
+}
+.card {
+    background: rgba(250, 250, 250, .3);
+    box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
+    padding: 20px;
+}
+input[type="text"], textarea {
+    width: 100%;
+    margin: .5em 2% 1em 0;
+    display: inline-block;
+    outline: none;
+    background: rgba(250,250,250,.4);
+    height: 40px;
+    border-radius: 4px;
+    padding: 1em 2em;
+}
+textarea {
+    height: 200px;
+}

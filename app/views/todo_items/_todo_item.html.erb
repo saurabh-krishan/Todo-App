@@ -1,23 +1,25 @@
-<div class="row clearfix">
+<div class="d-flex justify-content-between">
     <% if todo_item.completed? %>
         <div class="complete">
-            <%= button_to "Mark as Complete", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch %>
+            <%= button_to "Mark as Complete", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch, class: "btn btn-outline-primary btn-sm mt-2" %>
+            
         </div>
         <div class="todo_item">
             <p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p>
         </div>
         <div class="trash">
-            <%= button_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+            <%= button_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger btn-sm mt-2" %>
         </div>
     <% else %>
         <div class="complete">
-            <%= button_to "Mark as Complete", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch %>
+            <%= button_to "Mark as Complete", complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch, class: "btn btn-outline-primary btn-sm mt-2" %>
         </div>
         <div class="todo_item">
             <p><%= todo_item.content %></p>
         </div>
         <div class="trash">
-            <%= button_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+            <%= button_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" },  class: "btn btn-outline-danger btn-sm mt-2" %>
         </div>
     <% end %>
 </div>
+<hr>

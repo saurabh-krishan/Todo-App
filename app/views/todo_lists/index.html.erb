@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Todo lists</h1>
-
-<div id="todo_lists">
-  <% @todo_lists.each do |todo_list| %>
-    <%= render todo_list %>
-    <p>
-      <%= link_to "Show this todo list", todo_list %>
-    </p>
-  <% end %>
+<div class = "flashes">
+    <p style="color: green"><%= notice %></p>
 </div>
 
-<%= link_to "New todo list", new_todo_list_path %>
+<h1 class="display-2">Todo lists</h1>
+<hr>
+
+<div id="todo_lists">
+    <% @todo_lists.each do |todo_list| %>
+        <div class = "card mt-2">
+            <%= render todo_list %>
+            <div class="d-flex mb-2">
+                <%= link_to "Show Todo", todo_list, class: "mx-2 btn btn-outline-primary btn-sm" %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<%= link_to "New todo list", new_todo_list_path, class: "btn btn-outline-primary mt-4" %>
